@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>江涌版权交易电子商务系统</title>
+</head>
+
+<body>
+	<h1 align="center">江涌版权交易电子商务系统</h1>
+	
+	<p align="right">
+		<em><b><big>{{ user.username }}</big></em></b>
+	<a href="/comics/logout"> Logout </a>
+	</p>
+	
+	<form action="" method="post"> {% csrf_token %}
+	<table border="1" cellpadding="5" cellspacing="" align="center">
+		<tr bgcolor="cc9966">
+			<th><a href="">会员</a></th>
+			<th><a href="">会员查询</a></th>
+			<th></th>
+			<th></th>
+		</tr>	
+		<tr bgcolor="cc9966">	
+			<th><a href="">登记</a></th>
+			<th><a href="">分类列表</a></th>
+			<th></th>
+			<th></th>
+			
+		</tr>	
+		<tr bgcolor="cc9966">	
+			<th><a href="">更改</a></th>
+			<th><a href="">分区列表</a></th>
+			<th></th>
+			<th></th>
+
+		</tr>		
+</body>
+
+</html>

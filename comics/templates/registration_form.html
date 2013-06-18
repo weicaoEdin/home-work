@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title> 请注册到江涌版权交易电子商务系统 </title>
+</header>
+
+<body>
+	<h1 align="center">江涌版权交易电子商务系统</h1>
+	<h1 align="center">欢迎注册</h1>
+	<br>
+	
+	<div align="center">
+	<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+		<table border="1">
+			{{ form.as_table }}
+		</table>
+		<br>
+		<br>
+		<input type="submit" value="下一步" name="register">
+			<a href="/comics/">
+				<input type="button" value="返回" name="back">
+			</a>
+	</form>
+	</div>
+</body>
+</html>

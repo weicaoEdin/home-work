@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>江涌版权交易电子商务系统</title>
+</head>
+
+<body>
+	<h1 align="center">江涌版权交易电子商务系统</h1>
+	
+	<p align="right">
+		<em><b><big>{{ user.username }}</big></em></b>
+	<a href="/comics/logout"> Logout </a>
+	</p>
+	
+	<table border="1" cellpadding="5" cellspacing="" align="center">
+		<tr bgcolor="cc9966">
+			<th>名称</th>
+			<th>级别</th>
+			<th>类别</th>
+			<th>区域</th>
+			<th>授权人</th>
+			<th>手机号</th>
+			<th></th>
+		</tr>
+		{% for record in data %}
+		<tr >
+			<td> {{ record.company }} </td>
+			<td> {{ record.member_level }} </td> 
+			<td> {{ record.member_type }} </td>
+			<td> {{ record.area_city }} </td>
+			<td> {{ record.authorisor_name }} </td>
+			<td> {{ record.authorisor_phone}} </td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

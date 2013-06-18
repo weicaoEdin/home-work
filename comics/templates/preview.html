@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Preview</title>
+</head>
+
+<body>
+	
+	<p align="right">
+		<em><b><big>{{ user.username }}</big></em></b>
+	<a href="/xsystem/logout"> Logout </a>
+	</p>
+
+
+    <h1 align="center"> Song preview</h1>
+    <p align="center"><a href="/"> Back to list </a></p>
+    <p align="center"><a href="download/"> Download the file </a></p>
+	
+	{% if song_image_url %}
+		<p align="center"><img src="{{ song_image_url }}" align="bottom"/ ></p>
+	{% endif%}
+	
+	{% if song_csv_url %}
+	<table border="1">
+		{% for row in csvfile %}
+		<tr>
+			{% for data in row %}
+			<td> {{data}} <td>
+			
+			{% endfor%}
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+	
+</body>
+<html>
